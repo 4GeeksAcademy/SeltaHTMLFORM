@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="card m-5 w-50">
+        <!-- header row -->
+        <div class="card-header bg-light"><h2>Payment form example</h2></div>
+        
+        <div class="card-body">
+            <!-- Card number row -->
+            
+            <div class="row mx-1">
+                <div class="alert alert-danger" role="alert">
+                    Some fields are missing
+                  </div>
+            </div>
+            
+            <div class="row">
+                
+                <form class="d-flex justify-content-between">
+                    <div class="form-group col-6">
+                      <label for="inputCard"><strong>Card #</strong></label>
+                      <input type="tel" class="form-control" id="inputCard" aria-describedby="cardHelp" placeholder="XXXX XXXX XXXX XXXX"> 
+                      <small id="cardHelp" class="form-text text-muted">We'll never share your card number with anyone else.</small>
+                    </div>
+            
+            <div class="form-group col-2">
+                <label for="inputCvc"><strong>CVC #</strong></label>
+                <input type="tel" maxlength="3" min="0" max="999" pattern="[0-9]{3}" class="form-control" id="inputCvc"  placeholder="XXX ">
+            </div>
+            <div class="form-group col-2">
+                <label for="inputAmount"><strong>Amount </strong></label> 
+                <div class="d-flex "> <strong>$</strong> <input type="tel" class="form-control" id="inputAmount" placeholder="Amount "> </div>
+            </div>
+
+        </div>
+     <!-- Name row -->
+        <div class="row">
+            <div class="col-7">
+                <div class="form-outline">
+                <label class="form-label" for="firstName"><strong>First Name</strong></label>
+              <input type="text" id="firstName" class="form-control" />
+              
+                </div>
+            </div>
+          <div class="col">
+                <div class="form-outline">
+                    <label class="form-label" for="form10Example2"><strong>Last Name</strong></label>
+                    <input type="text" id="form10Example2" class="form-control" />
+              
+                </div>
+            </div>
+      </div>
+         <!-- Location -->
+      <div class="row">
+        <div class="col-6">
+            <div class="form-outline">
+                <label class="form-label" for="form1"><strong>City</strong></label>
+                <input type="text" id="form1" class="form-control" />
+            
+            </div>
+          </div>
+          <div class="col-3">
+                <label class="form-label" for="form2"><strong>State</strong></label>
+                <select class="form-select" id="form2">
+                <option selected>Choose...</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+          
+          <div class="col-3 mb-2">
+            <div class="form-outline">
+                <label class="form-label" for="form3"><strong>Postal Code</strong></label>
+                <input type="text" id="form3" class="form-control" />
+            
+            </div>
+          </div>
+      </div>
+      <!-- Payment / Message -->
+
+        <div class="row  ">
+            <div class="col">
+                <label class="form-label" for="custom-control-input"><strong>We accept:</strong></label> 
+                <div class="col-7 d-flex bg-secondary rounded justify-content-between ms-2 " style="height:25px">   
+                    
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadioInline1"><i class="fa-brands fa-cc-visa"></i></label>
+                    </div>
+                
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadioInline2"><i class="fa-brands fa-cc-mastercard"></i></label>
+                    </div>
+                
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadioInline1"><i class="fa-brands fa-cc-stripe"></i></label>
+                    </div>
+                
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadioInline1"><i class="fa-brands fa-cc-discover"></i></label>
+                    </div>
+                </div>
+            </div> 
+            
+            <div class="col">
+                    <label for="exampleFormControlTextarea1"><strong>Message</strong></label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <small class="form-text text-muted">Add any notes here.</small>
+                
+            </div>
+        </div>
+    </div>
+           
+    <div class="card-footer text-muted d-flex justify-content-end ">
+        <button type="button" class="btn btn-secondary me-2">Cancel</button>
+        <button type="button" class="btn btn-primary">Send</button>
+      </div>
+    </div>
+    
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html> 
